@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organic Life - Natural Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #2e7d32;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #2e7d32;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #388e3c;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 60px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .product, .review, .contact-info {
+      margin-bottom: 40px;
+    }
+
+    .product h3, .review h3 {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #66bb6a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Organic Life</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>Welcome to Organic Life</h2>
+      <p>We bring you the best organic, eco-friendly, and healthy products sourced directly from farms. Our mission is to promote a natural lifestyle through sustainable farming and clean ingredients.</p>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <h2>Our Products</h2>
+
+      <div class="product">
+        <h3>Organic Honey</h3>
+        <p>Pure and natural honey harvested from eco-farms without any added preservatives.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <h3>Natural Herbal Tea</h3>
+        <p>Enjoy our collection of refreshing teas made from organic herbs and flowers.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <h3>Fresh Farm Vegetables</h3>
+        <p>Hand-picked vegetables from local organic farms delivered to your doorstep.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+
+      <div class="review">
+        <h3>Sophia Green</h3>
+        <p>"Absolutely love the freshness and taste of their organic vegetables! Totally recommend!"</p>
+      </div>
+
+      <div class="review">
+        <h3>Daniel Roots</h3>
+        <p>"Great service and eco-conscious mission. The honey is delicious and feels so natural!"</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p>Email: contact@organiclifeshop.com</p>
+        <p>Phone: +1 987 654 3210</p>
+        <p>Address: 123 Green St, EcoCity, USA</p>
+      </div>
+      <div class="social-icons">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Organic Life. All rights reserved.
+  </footer>
+
+  <script>
+    // Simple highlight of nav links on scroll (optional enhancement)
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+      let fromTop = window.scrollY;
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.getAttribute("href"));
+        if (
+          section.offsetTop <= fromTop + 60 &&
+          section.offsetTop + section.offsetHeight > fromTop + 60
+        ) {
+          link.style.color = '#1b5e20';
+        } else {
+          link.style.color = '#388e3c';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
