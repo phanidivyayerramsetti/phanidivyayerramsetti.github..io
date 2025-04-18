@@ -1,148 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ShopEase - Online Store</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f3f3f3;
-    }
-
-    header {
-      background: url('https://images.unsplash.com/photo-1607083207630-d86b7de5f997?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
-      background-size: cover;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #333;
-      text-align: center;
-      padding: 10px;
-      position: relative;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 18px;
-    }
-
-    #cart-count {
-      position: absolute;
-      right: 20px;
-      top: 10px;
-      background-color: red;
-      color: white;
-      padding: 4px 8px;
-      border-radius: 50%;
-      font-size: 14px;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .product {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 280px;
-      margin: 15px;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .product img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-
-    h3 {
-      margin: 15px 0 5px;
-    }
-
-    p {
-      color: #555;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      border: none;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty and Cosmetics Store</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+        .nav {
+            background-color: #222;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            padding: 0.5rem;
+        }
+        .nav a:hover {
+            background-color: #444;
+        }
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1583231985378-69f70d86624e');
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .price {
+            color: #e91e63;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .add-to-cart {
+            background-color: #e91e63;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart:hover,
+        .add-to-cart:focus {
+            background-color: #c2185b;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
+    <header class="header">
+        <h1>Beauty and Cosmetics Store</h1>
+    </header>
 
-  <header>
-    <h1>ShopEase</h1>
-    <p>Your one-stop shop for everything!</p>
-  </header>
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Deals</a>
-    <a href="#">Contact</a>
-    <span id="cart-count">0</span>
-  </nav>
+    <main class="main-content">
+        <div class="hero">
+            <h2>Welcome to Our Beauty Store</h2>
+            <p>Find your perfect beauty products here!</p>
+        </div>
 
-  <div class="container">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" alt="Smartphone">
-      <h3>Smartphone</h3>
-      <p>High-performance mobile with crystal clear display.</p>
-      <button onclick="addToCart('Smartphone')">Add to Cart</button>
-    </div>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583231985378-69f70d86624e" alt="Luxury Eye Makeup Set" class="product-image">
+                <div class="product-info">
+                    <h3>Luxury Eye Makeup Set</h3>
+                    <p class="price">$99.99</p>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('eye-makeup')">Add to Cart</button>
+            </div>
 
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Laptop">
-      <h3>Laptop</h3>
-      <p>Powerful laptop for both work and entertainment.</p>
-      <button onclick="addToCart('Laptop')">Add to Cart</button>
-    </div>
-  </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583231985378-69f70d86624e" alt="Lipstick Set" class="product-image">
+                <div class="product-info">
+                    <h3>Lipstick Set</h3>
+                    <p class="price">$79.99</p>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('lipstick')">Add to Cart</button>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 ShopEase. All rights reserved.</p>
-  </footer>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583231985378-69f70d86624e" alt="Foundation Set" class="product-image">
+                <div class="product-info">
+                    <h3>Foundation Set</h3>
+                    <p class="price">$69.99</p>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('foundation')">Add to Cart</button>
+            </div>
+        </div>
+    </main>
 
-  <script>
-    let cartCount = 0;
+    <footer class="footer">
+        <p>&copy; 2023 Beauty and Cosmetics Store. All rights reserved.</p>
+    </footer>
 
-    function addToCart(productName) {
-      cartCount++;
-      document.getElementById("cart-count").innerText = cartCount;
-      alert(productName + " added to cart!");
-    }
-  </script>
-
+    <script>
+        function addToCart(productId) {
+            alert(`Adding ${productId} to cart...`);
+        }
+    </script>
 </body>
 </html>
